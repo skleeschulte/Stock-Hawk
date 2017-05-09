@@ -116,6 +116,9 @@ public final class QuoteSyncJob {
             }
 
             context.getContentResolver()
+                    .delete(Contract.Quote.URI, null, null);
+
+            context.getContentResolver()
                     .bulkInsert(
                             Contract.Quote.URI,
                             quoteCVs.toArray(new ContentValues[quoteCVs.size()]));
