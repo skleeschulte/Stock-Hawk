@@ -30,7 +30,7 @@ public final class PrefUtils {
             SharedPreferences.Editor editor = prefs.edit();
             editor.putBoolean(initializedKey, true);
             editor.putStringSet(stocksKey, defaultStocks);
-            editor.apply();
+            editor.commit();
             return defaultStocks;
         }
         return prefs.getStringSet(stocksKey, new HashSet<String>());
