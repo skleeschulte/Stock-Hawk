@@ -85,6 +85,11 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                 getContentResolver().delete(Contract.Quote.makeUriForStock(symbol), null, null);
                 Intent dataUpdatedIntent = new Intent(QuoteSyncJob.ACTION_DATA_UPDATED);
                 sendBroadcast(dataUpdatedIntent);
+
+                if (PrefUtils.getStocks(getApplicationContext()).size() == 0) {
+                    error.setText(getString(R.string.error_no_stocks));
+                    error.setVisibility(View.VISIBLE);
+                }
             }
         }).attachToRecyclerView(stockRecyclerView);
 
