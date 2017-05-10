@@ -33,8 +33,9 @@ public final class PrefUtils {
             editor.commit();
             return defaultStocks;
         }
-        return prefs.getStringSet(stocksKey, new HashSet<String>());
 
+        // http://stackoverflow.com/a/14034804/846987
+        return new HashSet<String>(prefs.getStringSet(stocksKey, new HashSet<String>()));
     }
 
     private static void editStockPref(Context context, String symbol, Boolean add) {
