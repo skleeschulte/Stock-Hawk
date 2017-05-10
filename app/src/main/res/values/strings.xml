@@ -17,7 +17,6 @@
     <string name="default_stocks_microsoft" translatable="false">MSFT</string>
     <string name="default_stocks_facebook" translatable="false">FB</string>
 
-
     <string name="action_change_units" translatable="false">@string/pref_display_mode_key</string>
 
 
@@ -34,5 +33,7 @@
     <string name="toast_stock_added_no_connectivity">Symbol %s added. Will refresh when network available.</string>
     <string name="toast_no_connectivity">Will refresh when network available.</string>
     <string name="toast_invalid_symbols">Could not load stock quotes for the following invalid symbols: %s</string>
+
+    <string name="empty_widget_text">No stock data available. Select stock symbols in the Stock Hawk app and sync data.</string>
 
 </resources>
