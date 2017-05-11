@@ -78,7 +78,7 @@ public final class QuoteSyncJob {
 
                 Stock stock = quotes.get(symbol);
 
-                if (!stock.isValid()) {
+                if (stock == null || !stock.isValid()) {
                     invalidSymbols.add(symbol);
                     continue;
                 }
